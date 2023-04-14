@@ -17,7 +17,10 @@
     "dev": "microbundle watch",
     "test": "vitest"
   },
-  "keywords": ["streak counter", "streak bar"],
+  "keywords": [
+    "streak counter",
+    "streak bar"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Uzoamaka126/rough-ts-tutorial.git"
@@ -31,6 +34,7 @@
   "devDependencies": {
     "@types/jsdom": "^21.1.1",
     "jsdom": "^21.1.1",
+    "microbundle": "^0.15.1",
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "vitest": "^0.30.0"
