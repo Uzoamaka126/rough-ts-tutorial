@@ -3,9 +3,9 @@ on: push
 jobs:
   publish:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./ts-streak-bar
+#     defaults:
+#       run:
+#         working-directory: ./ts-streak-bar
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
@@ -18,5 +18,5 @@ jobs:
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
-          package: './ts-streak-bar/package.json'
+          package: 'package.json'
           access: public
