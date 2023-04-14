@@ -1,0 +1,22 @@
+on: push
+
+jobs:
+  publish:
+    runs-on: ubtuntu-latest
+    defaults:
+      run:
+        working-directory: ts-streak-bar
+      steps:
+        - uses: actions/checkout@v1
+        - uses: actions/setup-node@v1
+          with:
+            node-version: '16'
+        - run: npm i -g npm
+        - run: npm install
+        - run: npm test
+        - run: npm build
+        - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: './ts-streak-bar/package.json'
+          access: public
