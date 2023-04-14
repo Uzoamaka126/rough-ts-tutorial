@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ts-streak-bar
+        working-directory: ./ts-streak-bar
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
         with:
           node-version: '16'
