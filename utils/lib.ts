@@ -17,6 +17,16 @@ export function formattedDateTime(date: string | Date): number {
     return setDate.getTime();
 }
 
+export function shouldIncrementOrResetStreakCount(currentDate: Date, lastLoginDate: string): StreakStatus {
+    const diff = differenceInDays(currentDate, lastLoginDate);
+    
+    // logged in the day after the current date
+    if (diff === 1) return "increment";
+    if (diff === 0) return "none";
+    // logged in after a day which should break the streak
+    return "reset";
+}
+
 export function differenceInDays(d1: Date, d2: string): number {        
     const diffTime = Math.abs((new Date(d1).getTime())- (new Date(d2).getTime()));
     const diffInDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

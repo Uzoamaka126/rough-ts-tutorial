@@ -16,8 +16,16 @@ yarn add @uzoamaka126/ts-streak-counter
 ```typescript
 import { streakCounter } from "@uzoamaka126/ts-streak-counter";
 
-const today = new Date();
+const date = new Date();
 
-// params:
-//
-const streak = streakCounter(localStorage, today); // returns an object
+/**
+ * Returns an object with the following properties:
+ * {
+ *  currentCount: number, 
+ *  lastLoginDate: string, 
+ *  startDate: string 
+ * }
+ * @param {localStorage} localStorage: Storage
+ * @param {date} date: number
+ **/
+const streak = streakCounter(localStorage, date);

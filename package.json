@@ -13,8 +13,6 @@
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
     "test": "vitest"
   },
   "keywords": [
@@ -34,7 +32,6 @@
   "devDependencies": {
     "@types/jsdom": "^21.1.1",
     "jsdom": "^21.1.1",
-    "microbundle": "^0.15.1",
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "vitest": "^0.30.0"
