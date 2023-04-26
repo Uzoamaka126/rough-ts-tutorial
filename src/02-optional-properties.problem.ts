@@ -6,7 +6,7 @@ type Params = {
 }
 
 export const getName = (params: Params): string => {
-    return `${params.firstName} ${params.lastName}`
+    return `${params.firstName}`
 }
 
 it("should work with just the first name", () => {
